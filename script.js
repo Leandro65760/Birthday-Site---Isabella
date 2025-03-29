@@ -3,7 +3,7 @@ $(document).ready(function () {
     .mouseenter(function () {
       $(".card").stop().animate(
         {
-          top: "-90px",
+          top: "-100px",
         },
         "slow"
       );

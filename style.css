@@ -10,9 +10,10 @@ body {
 .container {
   position: relative;
 }
+
 .valentines {
   position: relative;
-  top: 50px;
+  top: 4.8vw;
   cursor: pointer;
   animation: up 3s linear infinite;
 }
@@ -20,8 +21,8 @@ body {
 /* Style the envelope and the card */
 .envelope {
   position: relative;
-  width: 300px;
-  height: 200px;
+  width: 30vw; /* Tornando o tamanho do envelope responsivo */
+  height: calc(30vw * 2 / 3); /* Mantendo a proporção 3:2 */
   background-color: #f08080;
 }
 
@@ -29,22 +30,23 @@ body {
   background-color: #f08080;
   content: "";
   position: absolute;
-  width: 212px;
-  height: 212px;
+  width: 21.76vw; /* Convertendo 212px para uma unidade relativa */
+  height: 21.76vw; /* Convertendo 212px para uma unidade relativa */
   transform: rotate(45deg);
-  top: -105px;
-  left: 44px;
-  border-radius: 30px 0 0 0;
+  top: -10.6vw; /* Convertendo -105px para uma unidade relativa */
+  left: 4.099vw; /* Convertendo 44px para uma unidade relativa */
+  border-radius: 5vw 1vw 1vw 1vw; /* Convertendo 50px para uma unidade relativa */
 }
 
 .card {
   position: absolute;
   background-color: #eae2b7;
-  width: 270px;
-  height: 170px;
-  top: 5px;
-  left: 15px;
-  box-shadow: -5px -5px 100px rgba(0, 0, 0, 0.4);
+  width: 90%; /* Proporcional ao envelope */
+  height: 85%; /* Proporcional ao envelope */
+  top: -15%; /* Ajuste fino */
+  left: 5%; /* Ajuste fino */
+  box-shadow: -0.5vw -0.5vw 1vw rgba(0, 0, 0, 0.4); /* Box-shadow responsivo */
+  border-radius: 0.5vw; /* Convertendo 50px para uma unidade relativa */
 }
 
 .card:before {
@@ -52,33 +54,35 @@ body {
   position: absolute;
   border: 3px solid #003049;
   border-style: dotted;
-  width: 240px;
-  height: 140px;
-  left: 12px;
-  top: 12px;
+  width: 90%; /* Proporcional à largura do .card */
+  height: 90%; /* Proporcional à altura do .card */
+  left: 4.4%; /* Centraliza horizontalmente dentro do .card */
+  top: 5%; /* Centraliza verticalmente dentro do .card */
+  border-radius: 0vw; /* Mantém bordas arredondadas */
 }
 
 .text {
   position: absolute;
-  font-family:  'Brush Script MT', cursive;
-  font-size: 28px;
+  font-family: 'Brush Script MT', cursive;
+  font-size: 3vw; /* Tornando o tamanho responsivo */
   text-align: center;
-  line-height: 25px;
-  top: 19px;
-  left: 85px;
+  line-height: 2.5vw; /* Ajuste fino para centralizar o texto verticalmente */
+  top: 30%; /* Centraliza verticalmente dentro do .card:before */
+  left: 50%; /* Centraliza horizontalmente dentro do .card:before */
+  transform: translate(-50%, -50%); /* Garante centralização perfeita */
   color: #003049;
+  z-index: 1; /* Garante que o texto fique acima do .card:before */
 }
 
 .heart {
   background-color: #d62828;
   display: inline-block;
-  height: 30px;
-  margin: 0 10px;
+  height: 50px; /* Reduzido de 60px para 50px */
+  width: 50px; /* Reduzido de 60px para 50px */
   position: relative;
-  top: 110px;
-  left: 105px;
-  transform: rotate(-45deg);
-  width: 30px;
+  top: 140px; /* Ajustado para posicionar ligeiramente mais abaixo */
+  left: 42%; /* Mantendo o mesmo posicionamento horizontal */
+  transform: rotate(-45deg); /* Mantendo a rotação */
 }
 
 .heart:before,
@@ -86,27 +90,28 @@ body {
   content: "";
   background-color: #d62828;
   border-radius: 50%;
-  height: 30px;
+  height: 50px; /* Reduzido de 60px para 50px */
+  width: 50px; /* Reduzido de 60px para 50px */
   position: absolute;
-  width: 30px;
 }
 
 .heart:before {
-  top: -15px;
-  left: 0;
+  top: -25px; /* Ajustado proporcionalmente (-30px para -25px) */
+  left: 0; /* Mantendo o mesmo alinhamento */
 }
 
 .heart:after {
-  left: 15px;
-  top: 0;
+  top: 0; /* Mantendo o mesmo alinhamento */
+  left: 25px; /* Ajustado proporcionalmente (30px para 25px) */
 }
+
 .front {
   position: absolute;
-  border-right: 180px solid #f4978e;
-  border-top: 95px solid transparent;
-  border-bottom: 100px solid transparent;
-  left: 120px;
-  top: 5px;
+  border-right: 18vw solid #f4978e; /* Responsivo */
+  border-top: 9.5vw solid transparent; /* Responsivo */
+  border-bottom: 10vw solid transparent; /* Responsivo */
+  left: 40%; /* Ajuste fino */
+  top: 2%; /* Ajuste fino */
   width: 0;
   height: 0;
   z-index: 10;
@@ -115,10 +120,10 @@ body {
 .front:before {
   position: absolute;
   content: "";
-  border-left: 300px solid #f8ad9d;
-  border-top: 195px solid transparent;
-  left: -120px;
-  top: -95px;
+  border-left: 30vw solid #f8ad9d; /* Responsivo */
+  border-top: 19.5vw solid transparent; /* Responsivo */
+  left: -12vw; /* Responsivo */
+  top: -9.5vw; /* Responsivo */
   width: 0;
   height: 0;
 }
@@ -126,12 +131,12 @@ body {
 /* Add the shadow */
 .shadow {
   position: absolute;
-  width: 270px;
-  height: 20px;
+  width: 41%; /* Proporcional ao envelope */
+  height: 6vh; /* Responsivo */
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.3);
-  bottom: calc(10% + 75px);
-  left: calc(50% - 135px);
+  bottom: calc(10% + 2vh); /* Ajuste fino */
+  left: calc(50% - 20.5%); /* Ajuste fino */
   animation: scale 3s linear infinite;
   z-index: -1;
 }
@@ -143,7 +148,7 @@ body {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-30px);
+    transform: translateY(-3vh); /* Responsivo */
   }
 }
 
@@ -155,5 +160,17 @@ body {
   }
   50% {
     transform: scaleX(0.85);
+  }
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 768px) {
+  .envelope {
+    width: 80%; /* Ajuste para telas menores */
+    height: calc(80% * 2 / 3); /* Mantendo proporção */
+  }
+
+  .card {
+    box-shadow: -3px -3px 8px rgba(0, 0, 0, 0.4); /* Ajuste fino para telas menores */
   }
 }
